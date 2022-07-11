@@ -1,7 +1,7 @@
 const authRequest = async (endpoint, body) => {
   try {
     const response = await fetch(
-      `https://fs-task.herokuapp.com/auth/${endpoint}`,
+      `https://fs-task-codeit.herokuapp.com/auth/${endpoint}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -25,7 +25,7 @@ const authRequest = async (endpoint, body) => {
 const validateUserRequest = async () => {
   try {
     const response = await fetch(
-      `https://fs-task.herokuapp.com/dashboard`,
+      `https://fs-task-codeit.herokuapp.com/dashboard`,
       {
         method: "GET",
         headers: { token: localStorage.token },
@@ -43,7 +43,7 @@ const validateTokenRequest = async () => {
   if (!localStorage.token) return false;
   try {
     const response = await fetch(
-      `https://fs-task.herokuapp.com/auth/verify`,
+      `https://fs-task-codeit.herokuapp.com/auth/verify`,
       {
         method: "GET",
         headers: { token: localStorage.token },
